@@ -1,0 +1,22 @@
+{
+	"checkmarx":{
+		"url":"http://checkmarx-server/",
+		"APIType":1,
+		"username":"admin",
+		"password":"",
+		"APIversion":"0.0",
+		"baseProject":"CxServer\\SP\\"
+	},
+	"repos":{
+		"stash":{
+			"enabled":"True",
+			"repoType":"stash",
+			"url":"http://stash-url/",
+			"username":"username",
+			"password":"password",
+			"sshkey":"ssh_rsa",
+			"include":"*",
+			"exclude":"test,lab"
+		}
+	}
+}
