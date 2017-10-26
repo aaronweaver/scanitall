@@ -24,14 +24,14 @@ If you are satisfied with the results then run it again as follows:
 python ScanItAll.py
 ```
 
-The results will look like this:
+The results will look something like this:
 ```
-####################################
-Running in Test Mode: False
-####################################
+################################################################
+Running in  Test Mode. Projects won't be created in Checkmarx"
+################################################################
 
 Configuration Path: config/
-http://cxweb/cxwebinterface/SDK/CxSDKWebService.asmx
+Checkmarx Service URL: http://cxweb/cxwebinterface/SDK/CxSDKWebService.asmx
 
 ####################################
 Stash Project: Android
