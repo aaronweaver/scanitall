@@ -1,6 +1,6 @@
 # Scanitall!
 
-A python client to import all stash projects to Checkmarx SAST and will then begin immediately scanning those projects.
+A python client to import all Stash, BitBucket or GitHub projects to Checkmarx SAST and then begin immediately scanning those projects.
 
 ## Installation
 
@@ -10,7 +10,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 ## Usage
-Edit config/config.json.sample and save as config.json. Enter your Checkmarx server, credentials and then configure your stash server. For the Stash configuration there are two options to specify the projects to scan. If you enter a "*" for the include option then all projects will be scanned. You can additionally specify a project or projects to excluded by defining the project that you wish to exclude. For example: exclude="test,lab". Each include or exclude is a comma delimited list.
+Edit config/config.json.sample and save as config.json in the config folder. Enter your Checkmarx server, credentials and then configure your repos. For the repo configuration there are two options to specify which projects will be scanned. If you enter a "*" for the include option then all projects will be scanned. You can additionally specify a project or projects to excluded by defining the project that you wish to exclude. For example: exclude="test,lab". Each include or exclude is a comma delimited list.
 
 Once you have configured config.json then run the script in test mode.
 
@@ -21,7 +21,7 @@ python scanit.py --test=true
 If you are satisfied with the results then run it again as follows:
 
 ```
-python scanit.py
+python ScanItAll.py
 ```
 
 The results will look like this:

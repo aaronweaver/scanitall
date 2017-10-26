@@ -8,15 +8,39 @@
 		"baseProject":"CxServer\\SP\\"
 	},
 	"repos":{
-		"stash":{
+		"example-stash":{
 			"enabled":"True",
 			"repoType":"stash",
 			"url":"http://stash-url/",
 			"username":"username",
 			"password":"password",
-			"sshkey":"ssh_rsa",
+			"sshkey":"/path/to/ssh_rsa",
 			"include":"*",
 			"exclude":"test,lab"
+		},
+		"example-bitbucket":{
+			"enabled":"True",
+			"repoType":"bitbucket",
+			"url":"#",
+			"username":"username",
+			"password":"password",
+			"usernames":
+				{
+					"name": "username"
+				},
+			"sshkey":"/path/to/ssh_rsa",
+			"include":"*",
+			"exclude":""
+		},
+		"example-github":{
+			"enabled":"False",
+			"repoType":"github",
+			"url":"#",
+			"username":"username@yoursite.com",
+			"password":"password",
+			"sshkey":"/path/to/ssh_rsa",
+			"include":"*",
+			"exclude":""
 		}
 	}
 }

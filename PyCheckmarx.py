@@ -39,7 +39,7 @@ class PyCheckmarx(object):
 
 	##########################################
 	#
-	# Functions Related to Openning session with Checkmarx
+	# Functions Related to Opening session with Checkmarx
 	#
 	##########################################
 
@@ -58,7 +58,7 @@ class PyCheckmarx(object):
 				self.APITYPE = tmpJson["APIType"]
 				self.baseProject = tmpJson["baseProject"]
 		except Exception as e:
-			raise Exception("Unable to get configuration: %s" % e.message)
+			raise Exception("Unable to load configuration. Have you copied the sample config file in config and renamed as config.json?\n\n Error Message: %s" % e.message)
 
 	#
 	# Open Connection
@@ -84,7 +84,7 @@ class PyCheckmarx(object):
 
 			if responseDiscovery.IsSuccesfull:
 				serviceUrl = responseDiscovery.ServiceURL
-				print serviceUrl
+				print "Checkmarx Service URL: " + serviceUrl
 			else:
 				raise Exception("Error establishing connection > %s" % cxSDK.ErrorMessage)
 
@@ -342,7 +342,7 @@ class PyCheckmarx(object):
 			if responseScanResults.IsSuccesfull and responseScanResults.ScanResults:
 
 				XMLData = base64.b64decode(responseScanResults.ScanResults)
-
+				print XMLData
 				issues = re.findall('FalsePositive="([a-zA-Z]+)" Severity="([a-zA-Z]+)"', XMLData)
 
 				if self.DEBUG:

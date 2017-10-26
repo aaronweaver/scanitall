@@ -16,3 +16,4 @@ stashy==0.3
 suds==0.4
 urllib3==1.22
 Werkzeug==0.12.2
+PyGithub==1.35
